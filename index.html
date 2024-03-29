@@ -3,17 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Стартовий шаблон</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Pet's Planet</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header id="header" class="header-wrap">
-  <div class="container">
-    <div class="header"></div>
+  <div class="header-wrap__top">
+    <div class="container">
+      <div class="header__top">
+        <p>
+          <img src="./img/delivery.svg" alt="" /> Безкоштовна доставка від 500
+          грн
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="header-wrap__bottom">
+    <div class="container">
+      <div class="header__bottom">
+        <img src="./img/logo.svg" alt="" />
+      </div>
+    </div>
   </div>
 </header>
- <footer id="footer" class="footer-wrap">
+
+    <main><section class="block-main">
+  <div class="wrapper container">
+    <div class="left">
+      <div class="left-slider">
+        <div class="left-slider-main">
+          <div class="swiper-button-prev"><img src="./img/l.svg" alt="" /></div>
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/4.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/5.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/6.png" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"><img src="./img/r.svg" alt="" /></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/2.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/3.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/4.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/5.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/6.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="left-table">
+        <table>
+          <tr>
+            <td>Вага</td>
+            <td>500 грам</td>
+            <td>Повноцінний корм</td>
+          </tr>
+          <tr>
+            <td>Пробіотик</td>
+            <td><img src="./img/check.svg" alt="" /></td>
+            <td>Органічний про та пре-біотик</td>
+          </tr>
+          <tr>
+            <td>Вітаміни</td>
+            <td>17 Вітамнів</td>
+            <td>Спеціальний комплекс</td>
+          </tr>
+        </table>
+      </div>
+      <div class="left-review">
+        <div class="left-review__top">
+          <img src="./img/rate.svg" alt="" />
+          <p>Рейтинг 4.6 | 10 000+ Відгуків</p>
+        </div>
+        <div class="left-review__body"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+    <footer id="footer" class="footer-wrap">
   <div class="container"></div>
   <div class="footer"></div>
 </footer>
