@@ -1,5 +1,5 @@
 .wrapper {
-  @include flex(row, center, center);
+  @include flex(row, center, flex-start);
   gap: 36px;
   @media (max-width: 991px) {
     @include flex(column, center, center);
@@ -40,6 +40,8 @@
   }
 }
 .left-review {
+  border-bottom: 2px solid rgb(242, 245, 244);
+  margin-bottom: 21px;
   &__top {
     @include flex(row, flex-start, center);
     gap: 12px;
@@ -56,5 +58,421 @@
       letter-spacing: 4%;
       text-align: left;
     }
+  }
+  &__body {
+    @include flex(row, flex-start, flex-start);
+    gap: 16px;
+    background: rgb(242, 245, 244);
+    padding: 16px 16px 20px 16px;
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+  &__body-info {
+    h5 {
+      @include flex(row, flex-start, center);
+      gap: 12px;
+      color: rgb(33, 25, 85);
+      font-family: "Archivo", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 140%;
+      letter-spacing: 4%;
+      text-align: left;
+      margin-bottom: 14px;
+    }
+    h5 > span {
+      @include flex(row, flex-start, center);
+      gap: 6px;
+      color: rgba(33, 25, 85, 0.8);
+      font-family: "Montserrat";
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: 4%;
+      text-align: left;
+    }
+    h5 > span > img {
+      width: 16px;
+      height: 16px;
+    }
+    p {
+      color: rgba(33, 25, 85, 0.8);
+      font-family: "Montserrat";
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+  }
+  &__link {
+    @include flex(row, center, center);
+    gap: 4px;
+    color: rgb(33, 25, 85);
+    font-family: "Geologica", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 136%;
+    letter-spacing: 4%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+  }
+}
+
+.left-about-us {
+  h4 {
+    color: rgb(0, 28, 114);
+    font-family: "Geologica";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 4%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  ul {
+    @include flex(row, center, center);
+    gap: 32px;
+    margin-bottom: 42px;
+  }
+}
+
+.left-uniq {
+  padding: 24px 26px 30px 26px;
+  border-radius: 12px;
+  background: rgb(242, 245, 244);
+  h3 {
+    color: rgb(0, 28, 114);
+    font-family: "Geologica";
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 38.4px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  &__list {
+    @include flex(column, flex-start, flex-start);
+    gap: 26px;
+  }
+  &__item {
+    @include flex(row, flex-start, flex-start);
+    gap: 19px;
+  }
+  &__info {
+    h5 {
+      color: rgb(0, 28, 114);
+      font-family: "Montserrat";
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-bottom: 1px;
+    }
+    p {
+      color: rgb(0, 28, 114);
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+  }
+}
+
+.right {
+  width: 50%;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
+.right-hero {
+  border-bottom: 0.5px solid rgba(33, 25, 85, 0.12);
+  margin-bottom: 18px;
+  &__special {
+    @include flex(row, flex-start, center);
+    gap: 3px;
+    color: rgb(205, 0, 83);
+    font-family: "Geologica";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  h2 {
+    color: rgb(0, 28, 114);
+    font-family: "Geologica";
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+  }
+  p {
+    color: rgb(1, 1, 1);
+    font-family: "Geologica";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  ul {
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: wrap;
+    row-gap: 8px;
+    margin-bottom: 17px;
+  }
+  ul > li {
+    @include flex(row, flex-start, center);
+    gap: 13px;
+    width: 312px;
+    color: rgb(1, 1, 1);
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+}
+.right-veterinarian {
+  position: relative;
+  border-radius: 8px;
+  padding: 15px 179px 10px 18px;
+  background: rgb(242, 244, 248);
+  margin-bottom: 18px;
+  h5 {
+    color: rgb(0, 167, 202);
+    font-family: "Geologica";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 6px;
+  }
+  p.text {
+    color: rgb(0, 28, 114);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    font-style: italic;
+    text-align: left;
+  }
+  p.avtor {
+    color: rgb(51, 73, 142);
+    font-family: Geologica;
+    font-size: 13px;
+    font-weight: 250;
+    line-height: 16.8px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.right-weight {
+  margin-bottom: 21px;
+  h3 {
+    color: rgb(0, 28, 114);
+    font-family: "Geologica";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  h3 > span {
+    color: rgb(235, 0, 27);
+    font-family: "Geologica";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  ul {
+    @include flex(row, center, center);
+    gap: 10px;
+  }
+  ul > li {
+    @include flex(row, flex-start, center);
+    gap: 16px;
+    width: 210px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid rgb(235, 236, 239);
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    p {
+      color: rgb(0, 27, 114);
+      font-family: "Geologica";
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%;
+      letter-spacing: 6%;
+      text-align: left;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    span {
+      color: rgb(0, 27, 114);
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 13px;
+      letter-spacing: 4%;
+      text-align: left;
+    }
+  }
+  li.active {
+    border: 2px solid rgb(173, 54, 85);
+    background: rgb(250, 229, 238);
+  }
+}
+.right-number {
+  h3 {
+    color: rgb(0, 28, 114);
+    font-family: "Geologica";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  h3 > span {
+    color: rgb(235, 0, 27);
+    font-family: "Geologica";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  &__list {
+    @include flex(column, flex-start, flex-start);
+    gap: 16px;
+  }
+  &__item {
+    width: 100%;
+    @include flex(row, flex-start, flex-start);
+    padding: 16px;
+    border: 1px solid rgb(153, 164, 199);
+    border-radius: 10px;
+    cursor: pointer;
+    .radio-box {
+      @include flex(row, center, center);
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      border: 1px solid rgb(0, 28, 114);
+      border-radius: 9999px;
+      cursor: pointer;
+      &-active {
+        width: 12px;
+        height: 12px;
+        border-radius: 9999px;
+        background: rgb(0, 28, 114);
+      }
+    }
+    h6 {
+      color: rgb(51, 73, 142);
+      font-family: "Geologica", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: center;
+      margin-right: 34px;
+    }
+    p {
+      @include flex(row, center, center);
+      gap: 8px;
+      color: rgb(51, 73, 142);
+      font-family: "Geologica";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 17.5px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-right: 56px;
+    }
+    .sale {
+      @include flex(row, flex-start, center);
+      gap: 2px;
+      color: rgb(0, 28, 114);
+      font-family: "Geologica";
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: center;
+      span {
+        @include flex(column, flex-start, flex-start);
+        gap: 0;
+        color: rgb(51, 73, 142);
+        font-family: "Geologica", sans-serif;
+        font-size: 6px;
+        font-weight: 400;
+        line-height: 8px;
+        text-align: center;
+      }
+    }
+    .popular {
+      width: 75px;
+      @include flex(row, center, center);
+      height: 23px;
+      color: rgb(0, 28, 114);
+      font-family: "Geologica";
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 10px;
+      letter-spacing: 0.25px;
+      text-align: center;
+      border-radius: 5px;
+      background: rgb(255, 201, 44);
+      margin-left: 10px;
+    }
+    .best-price {
+      width: 75px;
+      @include flex(row, center, center);
+      height: 23px;
+      color: rgb(0, 28, 114);
+      font-family: "Geologica";
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 10px;
+      letter-spacing: 0.25px;
+      text-align: center;
+      border-radius: 5px;
+      background: rgb(204, 210, 227);
+      margin-left: 10px;
+    }
+  }
+  &__item.active {
+    border: 1px solid rgb(173, 54, 85);
+    border-radius: 10px;
+    background: rgb(250, 229, 238);
   }
 }
