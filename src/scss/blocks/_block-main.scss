@@ -329,6 +329,11 @@
     border-radius: 15px;
     background: rgb(255, 255, 255);
     cursor: pointer;
+    @media (max-width: 1320px) {
+      @include flex(column, center, center);
+      width: calc(100% / 3);
+      height: 150px;
+    }
     p {
       color: rgb(0, 27, 114);
       font-family: "Geologica";
@@ -387,6 +392,9 @@
     border: 1px solid rgb(153, 164, 199);
     border-radius: 10px;
     cursor: pointer;
+    @media (max-width: 1320px) {
+      align-items: center;
+    }
     .radio-box {
       @include flex(row, center, center);
       width: 18px;
@@ -423,6 +431,12 @@
       letter-spacing: 0%;
       text-align: left;
       margin-right: 56px;
+    }
+    .info {
+      @include flex(row, flex-start, center);
+      @media (max-width: 1320px) {
+        @include flex(column, center, flex-start);
+      }
     }
     .sale {
       @include flex(row, flex-start, center);
