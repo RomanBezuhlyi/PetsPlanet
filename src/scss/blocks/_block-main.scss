@@ -17,7 +17,7 @@
 .left-slider {
   margin-bottom: 21px;
   @media (max-width: 991px) {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
   &-main {
     position: relative !important;
@@ -28,6 +28,9 @@
 
 .left-table {
   margin-bottom: 20px;
+  @media (max-width: 991px) {
+    margin-bottom: 9px;
+  }
   table {
     width: 100%;
     border-collapse: collapse;
@@ -36,14 +39,57 @@
   th {
     border: 1px solid rgb(229, 231, 235);
     padding: 7px;
+    @media (max-width: 991px) {
+      padding: 1px 4px;
+      min-width: 100px;
+    }
   }
   td {
     text-align: center;
+    color: rgb(0, 28, 114);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.5px;
+    letter-spacing: 0%;
+    text-align: center;
+    @media (max-width: 991px) {
+      font-size: 8px;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      @media (max-width: 991px) {
+        width: 12px;
+        height: 12px;
+      }
+    }
   }
 }
+
 .left-review {
   border-bottom: 2px solid rgb(242, 245, 244);
   margin-bottom: 21px;
+  @media (max-width: 991px) {
+    margin-bottom: 15px;
+  }
+  &__link-m {
+    @media (max-width: 991px) {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      color: rgb(0, 28, 114);
+      font-family: "Geologica", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-bottom: 11px;
+    }
+  }
   &__top {
     @include flex(row, flex-start, center);
     gap: 12px;
@@ -51,6 +97,14 @@
     background: rgb(242, 245, 244);
     border-radius: 15px 15px 0 0;
     margin-bottom: 2px;
+    @media (max-width: 991px) {
+      @include flex(row, center, center);
+      padding: 3px 0 4px 0;
+      border: 0.5px solid rgb(229, 231, 235);
+      border-radius: 5px;
+      background: rgb(252, 252, 252);
+      margin-bottom: 13px;
+    }
     p {
       color: rgba(33, 25, 85, 0.5);
       font-family: "Montserrat", sans-serif;
@@ -59,6 +113,11 @@
       line-height: 130%;
       letter-spacing: 4%;
       text-align: left;
+      span {
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
     }
   }
   &__body {
@@ -68,6 +127,9 @@
     padding: 16px 16px 20px 16px;
     margin-bottom: 20px;
     border-radius: 0 0 10px 10px;
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
   &__body-info {
     h5 {
@@ -119,6 +181,9 @@
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 23px;
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 }
 
@@ -196,9 +261,12 @@
 .right-hero {
   border-bottom: 0.5px solid rgba(33, 25, 85, 0.12);
   margin-bottom: 18px;
+  @media (max-width: 991px) {
+    margin-bottom: 14px;
+    border-bottom: none;
+  }
   &__special {
     @include flex(row, flex-start, center);
-    gap: 3px;
     color: rgb(205, 0, 83);
     font-family: "Geologica";
     font-size: 14px;
@@ -207,6 +275,20 @@
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 8px;
+    img {
+      margin-right: 3px;
+    }
+    @media (max-width: 991px) {
+      font-size: 15px;
+      padding-bottom: 8px;
+      border-bottom: 0.5px solid rgba(33, 25, 85, 0.12);
+      margin-bottom: 8px;
+      img {
+        margin-right: 8px;
+        position: relative;
+        top: 2px;
+      }
+    }
   }
   h2 {
     color: rgb(0, 28, 114);
@@ -218,6 +300,11 @@
     text-align: left;
     text-transform: capitalize;
     margin-bottom: 8px;
+    @media (max-width: 991px) {
+      font-size: 21px;
+      line-height: 30px;
+      margin-bottom: 7px;
+    }
   }
   p {
     color: rgb(1, 1, 1);
@@ -228,12 +315,20 @@
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 15px;
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 22.5px;
+      margin-bottom: 7px;
+    }
   }
   ul {
     @include flex(row, flex-start, flex-start);
     flex-wrap: wrap;
     row-gap: 8px;
     margin-bottom: 17px;
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
   ul > li {
     @include flex(row, flex-start, center);
@@ -249,12 +344,57 @@
   }
 }
 
+.switcher {
+  h3 {
+    color: rgb(0, 28, 114);
+    font-family: "Geologica", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 13px;
+  }
+  &__list {
+    @include flex(row, center, center);
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  &__item {
+    a {
+      @include flex(row, center, center);
+      gap: 5px;
+      width: 115px;
+      height: 34px;
+      color: rgba(0, 28, 114, 0.8);
+      font-family: "Geologica", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: center;
+      border: 1px solid rgb(204, 210, 227);
+      border-radius: 8px;
+    }
+  }
+  &__item.active {
+    border: 1px solid rgb(0, 28, 114);
+    border-radius: 8px;
+
+    background: rgb(242, 244, 248);
+  }
+}
+
 .right-veterinarian {
   position: relative;
   border-radius: 8px;
   padding: 15px 179px 10px 18px;
   background: rgb(242, 244, 248);
   margin-bottom: 18px;
+  @media (max-width: 991px) {
+    padding: 15px 100px 17px 16px;
+    margin-bottom: 15px;
+  }
   h5 {
     color: rgb(0, 167, 202);
     font-family: "Geologica";
@@ -264,6 +404,12 @@
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 6px;
+    position: relative;
+    z-index: 3;
+    @media (max-width: 991px) {
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
   }
   p.text {
     color: rgb(0, 28, 114);
@@ -274,6 +420,8 @@
     letter-spacing: 0%;
     font-style: italic;
     text-align: left;
+    position: relative;
+    z-index: 3;
   }
   p.avtor {
     color: rgb(51, 73, 142);
@@ -283,6 +431,8 @@
     line-height: 16.8px;
     letter-spacing: 0%;
     text-align: left;
+    position: relative;
+    z-index: 3;
   }
   img {
     position: absolute;
@@ -291,6 +441,9 @@
     width: auto;
     height: 100%;
     object-fit: cover;
+    @media (max-width: 991px) {
+      width: 126px;
+    }
   }
 }
 
@@ -359,6 +512,12 @@
     border: 2px solid rgb(173, 54, 85);
     background: rgb(250, 229, 238);
   }
+}
+
+.wrap {
+  padding: 17px 13px 14px 8px;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
 }
 
 .right-number {

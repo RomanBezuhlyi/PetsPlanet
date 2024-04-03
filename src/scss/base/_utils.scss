@@ -4,3 +4,17 @@
 .no-scroll {
   overflow-y: hidden;
 }
+
+.mobile {
+  display: none !important;
+  @media (max-width: 991px) {
+    display: block !important;
+  }
+}
+
+.desktop {
+  display: block !important;
+  @media (max-width: 991px) {
+    display: none !important;
+  }
+}
