@@ -1,6 +1,10 @@
 .product-wrap {
   margin-top: 49px;
   margin-bottom: 69px;
+  @media (max-width: 991px) {
+    margin-top: 22px;
+    margin-bottom: 32px;
+  }
 }
 .product {
   h2 {
