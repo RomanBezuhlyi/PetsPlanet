@@ -1,0 +1,193 @@
+.faq-wrap {
+  padding: 108px 0 35px 0;
+  background: rgb(217, 217, 217);
+  @media (max-width: 991px) {
+    padding: 50px 0 0 0;
+    background: rgb(255, 229, 250);
+  }
+}
+.faq-wrap .container {
+  @media (max-width: 991px) {
+    padding: 0;
+  }
+}
+.faq-block {
+  position: relative;
+  @include flex(row, space-between, center);
+  @media (max-width: 991px) {
+    @include flex(column-reverse, center, center);
+    gap: 25px;
+  }
+  .bg {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  h4 {
+    color: rgb(1, 1, 1);
+    font-family: "Geologica";
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  &__title {
+    @media (max-width: 991px) {
+      background: rgb(217, 217, 217);
+      padding: 42px 10px 20px 10px;
+      width: 100%;
+    }
+    h1 {
+      width: 420px;
+      color: rgb(1, 1, 1);
+      font-family: "Geologica";
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0%;
+      text-align: left;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+      @media (max-width: 991px) {
+        width: 70%;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 20px;
+        margin: auto;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 3;
+      }
+    }
+    p {
+      width: 420px;
+      color: rgb(1, 1, 1);
+      font-family: "Geologica";
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      @media (max-width: 991px) {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 3;
+      }
+    }
+    .footer-link {
+      color: rgb(1, 1, 1);
+      font-family: "Geologica";
+      font-size: 30px;
+      font-weight: 700;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+    .footer-list {
+      display: none;
+      padding: 8px 16px 8px 16px;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      background: rgb(255, 255, 255);
+      position: relative;
+      z-index: 3;
+      @media (max-width: 991px) {
+        @include flex(row, center, center);
+        gap: 16px;
+        width: 256px;
+        margin: auto;
+      }
+      li {
+        @include flex(column, center, center);
+        padding: 8px 12px 8px 12px;
+        &:not(:last-child) {
+          border-right: 0.5px solid rgba(1, 1, 1, 0.12);
+        }
+      }
+      li > a {
+        @include flex(column, center, center);
+        margin-bottom: 6px;
+      }
+      li > p {
+        color: rgb(1, 1, 1);
+        font-family: "Montserrat";
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 4%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__list {
+    width: 594px;
+    @media (max-width: 1200px) {
+      width: 450px;
+    }
+    @media (max-width: 991px) {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+  &__item {
+    padding: 16px 0;
+    border-bottom: 1px solid rgb(1, 1, 1);
+    &-top {
+      @include flex(row, space-between, center);
+      h5 {
+        width: 548px;
+        color: rgb(1, 1, 1);
+        font-family: "Geologica";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: left;
+        @media (max-width: 1200px) {
+          width: 420px;
+        }
+        @media (max-width: 991px) {
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+      span {
+        @include flex(row, center, center);
+        font-size: 36px;
+        cursor: pointer;
+      }
+    }
+    &-body {
+      @include transition;
+      max-height: 0;
+      overflow: hidden;
+      p {
+        padding-top: 20px;
+        color: rgb(1, 1, 1);
+        font-family: "Montserrat";
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: left;
+        @media (max-width: 991px) {
+          padding-top: 10px;
+          font-size: 15px;
+        }
+      }
+    }
+    &-body.open {
+      max-height: 150px;
+    }
+  }
+}
