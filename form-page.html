@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Pet's Planet</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header id="header" class="header-wrap-secondary">
+  <div class="header-wrap-secondary__top">
+    <div class="container">
+      <div class="header-secondary__top">
+        <p>
+          Увага! У зв'язку з надзвичайно високим попитом кількість акційної
+          продукції обмежена. Поспішайте!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="header-wrap-secondary__bottom">
+    <div class="container">
+      <div class="header-secondary__bottom">
+        <img src="./img/logo.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main><section class="form-wrap">
+  <div class="container">
+    <div class="form">
+      <div class="form__left">
+        <div class="form__left-sale">
+          <span>💰</span>
+          <p>
+            Зробіть замовлення зараз та отримайте
+            <b>знижку 150 грн на наступну покупку!</b>
+          </p>
+        </div>
+        <div class="form__left-wrap">
+          <h6>Інформація</h6>
+          <div class="input">
+            <label for="num">Номер телефону</label>
+            <input
+              style="border-color: rgb(0, 194, 174)"
+              id="num"
+              name="num"
+              type="text"
+              placeholder="+38 000 00 00"
+            />
+            <img class="input__check" src="./img/input-check.svg" alt="" />
+          </div>
+          <div class="row">
+            <div class="input">
+              <label for="name">Імя</label>
+              <input id="name" name="name" type="text" placeholder="Олег" />
+            </div>
+            <div class="input">
+              <label for="last_name">Прізвище</label>
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                placeholder="Токарчук"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__left-wrap">
+          <h6>Інформація про доставку</h6>
+          <div class="input input-drop">
+            <label for="city">Місто</label>
+            <input id="city" name="city" type="text" value="Київ" disabled />
+            <img class="input__arr" src="./img/chevron-down-input.svg" alt="" />
+            <ul class="dropdown">
+              <li class="dropdown__item">Київ</li>
+              <li class="dropdown__item">Козятин</li>
+              <li class="dropdown__item">Жашків</li>
+              <li class="dropdown__item">Тростянець</li>
+            </ul>
+          </div>
+          <div class="input">
+            <label for="post">Адреса доставки або № Складу Нової Пошти </label>
+            <input
+              style="border-color: rgb(0, 194, 174)"
+              id="post"
+              name="post"
+              type="text"
+              value="Склад №26 "
+            />
+            <img class="input__check" src="./img/input-check.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="form__right">
+        <div class="form__right-wrap">
+          <h6>Ваше змовлення</h6>
+          <div class="product">
+            <img class="product__img" src="./img/Free_Doypack.png" alt="" />
+            <div class="product__info">
+              <h5 class="product__info-title">Вологий корм ProFood | 500г</h5>
+              <p class="product__info-text">
+                Повноцінний дієтичний вологий корм з рубця молодих телят +
+                вітамінний комплекс!
+              </p>
+              <ul class="product__info-list">
+                <li class="product__info-item">
+                  <img src="./img/check-table.svg" alt="" />
+                  Покращення травлення
+                </li>
+                <li class="product__info-item">
+                  <img src="./img/check-table.svg" alt="" />
+                  Здоров'я шкіри та блиск шерсті
+                </li>
+                <li class="product__info-item">
+                  <img src="./img/check-table.svg" alt="" />
+                  Зміцнення рухового апарату
+                </li>
+              </ul>
+              <div class="product__info-price">
+                Тільки:<span class="main-price">139 грн</span
+                ><span class="price-old">159.90грн</span>
+              </div>
+            </div>
+          </div>
+          <button class="new-clients" type="submit">
+            ТІЛЬКИ ДЛЯ НОВИХ КЛІЄНТІВ
+          </button>
+          <div class="form__right-wrap-descr">
+            <img src="./img/el.svg" alt="" />
+            <p>Сьогодні продано 258 шт.</p>
+          </div>
+        </div>
+        <div class="form__right-wrap">
+          <h6>Сума замовлення:</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+    <footer id="footer" class="footer-wrap">
+  <div class="container"></div>
+  <div class="footer"></div>
+</footer>
+
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>
