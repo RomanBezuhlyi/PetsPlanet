@@ -1,14 +1,24 @@
 .form-wrap {
   margin-bottom: 40px;
+  @media (max-width: 991px) {
+    margin-bottom: 24px;
+  }
 }
 
 .form {
   width: 100%;
   @include flex(row, center, flex-start);
   gap: 24px;
+  @media (max-width: 991px) {
+    @include flex(column, center, center);
+    gap: 22px;
+  }
   &__left {
     width: 60%;
     @include flex(column, flex-start, flex-start);
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
   &__left-sale {
     width: 100%;
@@ -49,6 +59,9 @@
     .row {
       @include flex(row, center, center);
       gap: 18px;
+      @media (max-width: 991px) {
+        @include flex(column, center, center);
+      }
     }
     .input {
       width: 100%;
@@ -137,6 +150,9 @@
   &__right {
     width: 40%;
     @include flex(column, flex-start, flex-start);
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
 
   &__right-wrap {
@@ -148,6 +164,10 @@
     &:not(:last-child) {
       margin-bottom: 16px;
     }
+    .top {
+      @include flex(row, space-between, center);
+      margin-bottom: 32px;
+    }
     h6 {
       color: rgb(33, 25, 85);
       font-family: "Montserrat";
@@ -156,6 +176,68 @@
       line-height: 140%;
       letter-spacing: 0%;
       text-align: left;
+    }
+    .list {
+      @include flex(column, center, center);
+      gap: 12px;
+      &__item {
+        width: 100%;
+        @include flex(row, space-between, center);
+        p {
+          color: rgba(33, 25, 85, 0.6);
+          font-family: "Montserrat";
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 16px;
+          letter-spacing: 4%;
+          text-align: left;
+        }
+        p:last-child {
+          font-weight: 600;
+        }
+        p > span {
+          color: rgb(248, 30, 0);
+        }
+      }
+    }
+    .list-2 {
+      margin-top: 14px;
+      margin-bottom: 16px;
+      .list__item {
+        p {
+          color: rgb(33, 25, 85);
+          font-family: "Montserrat";
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 16px;
+          letter-spacing: 4%;
+          text-align: left;
+        }
+        p:last-child {
+          color: rgb(33, 25, 85);
+          font-family: "Montserrat";
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 110%;
+          letter-spacing: 0px;
+          text-align: right;
+        }
+      }
+    }
+    .order {
+      @include flex(row, center, center);
+      color: rgb(255, 255, 255);
+      font-family: "Montserrat";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 136%;
+      letter-spacing: 2%;
+      text-align: left;
+      padding: 16px 0;
+      width: 100%;
+      border-radius: 10px;
+      background: rgb(42, 198, 83);
+      cursor: pointer;
     }
     .product {
       @include flex(row, flex-start, center);
@@ -170,6 +252,10 @@
           text-align: left;
           text-transform: capitalize;
           margin-bottom: 2px;
+          @media (max-width: 991px) {
+            font-family: "Montserrat";
+            line-height: 20px;
+          }
         }
         &-text {
           color: rgb(0, 28, 114);
@@ -180,15 +266,33 @@
           letter-spacing: 0%;
           text-align: left;
           margin-bottom: 11px;
+          @media (max-width: 991px) {
+            color: rgb(33, 25, 85);
+            font-family: "Montserrat";
+            font-size: 10px;
+          }
         }
         &-list {
           @include flex(column, flex-start, flex-start);
           gap: 6px;
           margin-bottom: 14px;
+          @media (max-width: 991px) {
+            margin-top: 8px;
+          }
         }
         &-item {
           @include flex(row, flex-start, center);
           gap: 8px;
+          color: rgb(1, 1, 1);
+          font-family: "Montserrat";
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 0%;
+          text-align: left;
+          @media (max-width: 991px) {
+            color: rgb(33, 25, 85);
+          }
         }
         &-price {
           color: rgb(33, 25, 85);
@@ -198,6 +302,10 @@
           line-height: 140%;
           letter-spacing: 0%;
           text-align: left;
+          @media (max-width: 991px) {
+            font-size: 10px;
+            @include flex(row, flex-start, center);
+          }
         }
         &-price .main-price {
           color: rgb(33, 25, 85);
@@ -209,6 +317,12 @@
           text-align: right;
           margin-left: 8px;
           margin-right: 6px;
+          @media (max-width: 991px) {
+            margin-left: 4px;
+            font-size: 18px;
+            white-space: nowrap;
+            margin-right: 4px;
+          }
         }
         &-price .price-old {
           color: rgba(33, 25, 85, 0.5);
@@ -218,7 +332,10 @@
           line-height: 140%;
           letter-spacing: 4%;
           text-align: right;
-          text-decoration: underline;
+          text-decoration: line-through;
+          @media (max-width: 991px) {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -236,6 +353,9 @@
       border-radius: 8px;
       background: rgb(14, 11, 204);
       margin-bottom: 16px;
+      @media (max-width: 991px) {
+        margin-top: 0;
+      }
     }
     &-descr {
       @include flex(row, center, center);
