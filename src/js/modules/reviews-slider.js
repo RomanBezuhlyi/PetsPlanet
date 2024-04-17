@@ -1,4 +1,4 @@
-var swiper = new Swiper(".swiper", {
+var swiper12 = new Swiper(".swiper-reviews", {
   spaceBetween: 21,
   slidesPerView: 2,
   navigation: {

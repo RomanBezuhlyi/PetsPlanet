@@ -1,0 +1,102 @@
+.footer-2-wrap {
+  position: relative;
+  background: rgb(193, 233, 255);
+  padding: 100px 0;
+  overflow: hidden;
+  @media (max-width: 991px) {
+    padding: 76px 0 260px 0;
+  }
+  &__bg {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    @media (max-width: 991px) {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__woman {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+.footer-2 {
+  h4 {
+    color: rgb(1, 1, 1);
+    font-family: "Geologica";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 2px;
+    @media (max-width: 991px) {
+      position: relative;
+      z-index: 2;
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+  p {
+    color: rgb(1, 1, 1);
+    font-family: "Geologica";
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    @media (max-width: 991px) {
+      position: relative;
+      z-index: 2;
+      font-size: 17px;
+      text-align: center;
+    }
+  }
+  a {
+    display: block;
+    color: rgb(1, 1, 1);
+    font-family: "Geologica";
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 5px;
+    @media (max-width: 991px) {
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+.footer-descr {
+  @include flex(row, center, center);
+  .container {
+    width: 100%;
+  }
+  span {
+    display: block;
+    margin-top: 43px;
+    margin-bottom: 10px;
+    color: rgb(33, 25, 85);
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+    @media (max-width: 991px) {
+      width: 100%;
+      text-align: center;
+      margin-top: 8px;
+      border-top: 0.5px solid rgba(33, 25, 85, 0.12);
+      padding-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}
