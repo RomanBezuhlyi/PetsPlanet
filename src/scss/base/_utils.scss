@@ -12,6 +12,13 @@
   }
 }
 
+.mobile-flex {
+  display: none !important;
+  @media (max-width: 991px) {
+    display: flex !important;
+  }
+}
+
 .desktop {
   display: block !important;
   @media (max-width: 991px) {

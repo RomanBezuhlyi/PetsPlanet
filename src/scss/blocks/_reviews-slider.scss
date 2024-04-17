@@ -1,0 +1,67 @@
+.reviews-slider-wrap {
+  margin-bottom: 36px;
+  @media (max-width: 991px) {
+    margin-bottom: 24px;
+  }
+}
+.reviews-slider {
+  padding: 30px 20px;
+  border: 1.5px solid rgba(33, 25, 85, 0.12);
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+  @media (max-width: 991px) {
+    padding: 20px 0;
+    padding-bottom: 0;
+  }
+  &__top {
+    @include flex(row, space-between, center);
+    padding-bottom: 28px;
+    border-bottom: 0.5px solid rgba(33, 25, 85, 0.12);
+    margin-bottom: 18px;
+    @media (max-width: 991px) {
+      @include flex(column, flex-start, flex-start);
+      margin: 0 17px;
+      padding-bottom: 5px;
+      margin-bottom: 8px;
+    }
+  }
+  &__rate {
+    @include flex(row, flex-start, center);
+    gap: 11px;
+    @media (max-width: 991px) {
+      @include flex(column, flex-start, flex-start);
+    }
+    p {
+      color: rgba(33, 25, 85, 0.5);
+      font-family: "Montserrat";
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: 4%;
+      text-align: left;
+    }
+  }
+  &__nav {
+    @include flex(row, center, center);
+    gap: 12px;
+  }
+}
+
+.swiper-reviews {
+  height: 368px !important;
+}
+
+.slider-button-prev,
+.slider-button-next {
+  @include flex(row, center, center);
+  width: 32px;
+  height: 32px;
+  border: 0.5px solid rgba(33, 25, 85, 0.08);
+  border-radius: 24px;
+  padding: 8px 8px 8px 7px;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    background: rgba(33, 25, 85, 0.08);
+  }
+}

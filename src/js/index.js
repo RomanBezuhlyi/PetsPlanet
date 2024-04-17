@@ -4,3 +4,4 @@ import "./modules/number";
 import "./modules/faq";
 import "./modules/faq-block";
 import "./modules/form";
+import "./modules/reviews-slider";
